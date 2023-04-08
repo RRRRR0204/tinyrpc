@@ -91,20 +91,20 @@ struct UserDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UserDefaultTypeInternal _User_default_instance_;
-PROTOBUF_CONSTEXPR GetFriendListRequestResponse::GetFriendListRequestResponse(
+PROTOBUF_CONSTEXPR GetFriendListResponse::GetFriendListResponse(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.friend_list_)*/{}
   , /*decltype(_impl_.result_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
-struct GetFriendListRequestResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR GetFriendListRequestResponseDefaultTypeInternal()
+struct GetFriendListResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetFriendListResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~GetFriendListRequestResponseDefaultTypeInternal() {}
+  ~GetFriendListResponseDefaultTypeInternal() {}
   union {
-    GetFriendListRequestResponse _instance;
+    GetFriendListResponse _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetFriendListRequestResponseDefaultTypeInternal _GetFriendListRequestResponse_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetFriendListResponseDefaultTypeInternal _GetFriendListResponse_default_instance_;
 }  // namespace fixbug
 static ::_pb::Metadata file_level_metadata_test_2eproto[6];
 static const ::_pb::EnumDescriptor* file_level_enum_descriptors_test_2eproto[1];
@@ -152,13 +152,13 @@ const uint32_t TableStruct_test_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(pro
   PROTOBUF_FIELD_OFFSET(::fixbug::User, _impl_.age_),
   PROTOBUF_FIELD_OFFSET(::fixbug::User, _impl_.sex_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::fixbug::GetFriendListRequestResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::fixbug::GetFriendListResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::fixbug::GetFriendListRequestResponse, _impl_.result_),
-  PROTOBUF_FIELD_OFFSET(::fixbug::GetFriendListRequestResponse, _impl_.friend_list_),
+  PROTOBUF_FIELD_OFFSET(::fixbug::GetFriendListResponse, _impl_.result_),
+  PROTOBUF_FIELD_OFFSET(::fixbug::GetFriendListResponse, _impl_.friend_list_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, -1, sizeof(::fixbug::ResultCode)},
@@ -166,7 +166,7 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 16, -1, -1, sizeof(::fixbug::LoginResponse)},
   { 24, -1, -1, sizeof(::fixbug::GetFriendListRequest)},
   { 31, -1, -1, sizeof(::fixbug::User)},
-  { 40, -1, -1, sizeof(::fixbug::GetFriendListRequestResponse)},
+  { 40, -1, -1, sizeof(::fixbug::GetFriendListResponse)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -175,7 +175,7 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::fixbug::_LoginResponse_default_instance_._instance,
   &::fixbug::_GetFriendListRequest_default_instance_._instance,
   &::fixbug::_User_default_instance_._instance,
-  &::fixbug::_GetFriendListRequestResponse_default_instance_._instance,
+  &::fixbug::_GetFriendListResponse_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_test_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -186,17 +186,18 @@ const char descriptor_table_protodef_test_2eproto[] PROTOBUF_SECTION_VARIABLE(pr
   "\022\017\n\007success\030\002 \001(\010\"&\n\024GetFriendListReques"
   "t\022\016\n\006userid\030\001 \001(\r\"[\n\004User\022\014\n\004name\030\001 \001(\014\022"
   "\013\n\003age\030\002 \001(\r\022\035\n\003sex\030\003 \001(\0162\020.fixbug.User."
-  "Sex\"\031\n\003Sex\022\007\n\003MAN\020\000\022\t\n\005WOMAN\020\001\"e\n\034GetFri"
-  "endListRequestResponse\022\"\n\006result\030\001 \001(\0132\022"
-  ".fixbug.ResultCode\022!\n\013friend_list\030\002 \003(\0132"
-  "\014.fixbug.User2e\n\016UserServiceRpc\022S\n\rGetFr"
-  "iendList\022\034.fixbug.GetFriendListRequest\032$"
-  ".fixbug.GetFriendListRequestResponseB\003\200\001"
-  "\001b\006proto3"
+  "Sex\"\031\n\003Sex\022\007\n\003MAN\020\000\022\t\n\005WOMAN\020\001\"^\n\025GetFri"
+  "endListResponse\022\"\n\006result\030\001 \001(\0132\022.fixbug"
+  ".ResultCode\022!\n\013friend_list\030\002 \003(\0132\014.fixbu"
+  "g.User2\224\001\n\016UserServiceRpc\0224\n\005Login\022\024.fix"
+  "bug.LoginRequest\032\025.fixbug.LoginResponse\022"
+  "L\n\rGetFriendList\022\034.fixbug.GetFriendListR"
+  "equest\032\035.fixbug.GetFriendListResponseB\003\200"
+  "\001\001b\006proto3"
   ;
 static ::_pbi::once_flag descriptor_table_test_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_test_2eproto = {
-    false, false, 529, descriptor_table_protodef_test_2eproto,
+    false, false, 570, descriptor_table_protodef_test_2eproto,
     "test.proto",
     &descriptor_table_test_2eproto_once, nullptr, 0, 6,
     schemas, file_default_instances, TableStruct_test_2eproto::offsets,
@@ -1365,24 +1366,24 @@ void User::InternalSwap(User* other) {
 
 // ===================================================================
 
-class GetFriendListRequestResponse::_Internal {
+class GetFriendListResponse::_Internal {
  public:
-  static const ::fixbug::ResultCode& result(const GetFriendListRequestResponse* msg);
+  static const ::fixbug::ResultCode& result(const GetFriendListResponse* msg);
 };
 
 const ::fixbug::ResultCode&
-GetFriendListRequestResponse::_Internal::result(const GetFriendListRequestResponse* msg) {
+GetFriendListResponse::_Internal::result(const GetFriendListResponse* msg) {
   return *msg->_impl_.result_;
 }
-GetFriendListRequestResponse::GetFriendListRequestResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+GetFriendListResponse::GetFriendListResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:fixbug.GetFriendListRequestResponse)
+  // @@protoc_insertion_point(arena_constructor:fixbug.GetFriendListResponse)
 }
-GetFriendListRequestResponse::GetFriendListRequestResponse(const GetFriendListRequestResponse& from)
+GetFriendListResponse::GetFriendListResponse(const GetFriendListResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  GetFriendListRequestResponse* const _this = this; (void)_this;
+  GetFriendListResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.friend_list_){from._impl_.friend_list_}
     , decltype(_impl_.result_){nullptr}
@@ -1392,10 +1393,10 @@ GetFriendListRequestResponse::GetFriendListRequestResponse(const GetFriendListRe
   if (from._internal_has_result()) {
     _this->_impl_.result_ = new ::fixbug::ResultCode(*from._impl_.result_);
   }
-  // @@protoc_insertion_point(copy_constructor:fixbug.GetFriendListRequestResponse)
+  // @@protoc_insertion_point(copy_constructor:fixbug.GetFriendListResponse)
 }
 
-inline void GetFriendListRequestResponse::SharedCtor(
+inline void GetFriendListResponse::SharedCtor(
     ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
   (void)is_message_owned;
@@ -1406,8 +1407,8 @@ inline void GetFriendListRequestResponse::SharedCtor(
   };
 }
 
-GetFriendListRequestResponse::~GetFriendListRequestResponse() {
-  // @@protoc_insertion_point(destructor:fixbug.GetFriendListRequestResponse)
+GetFriendListResponse::~GetFriendListResponse() {
+  // @@protoc_insertion_point(destructor:fixbug.GetFriendListResponse)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -1415,18 +1416,18 @@ GetFriendListRequestResponse::~GetFriendListRequestResponse() {
   SharedDtor();
 }
 
-inline void GetFriendListRequestResponse::SharedDtor() {
+inline void GetFriendListResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.friend_list_.~RepeatedPtrField();
   if (this != internal_default_instance()) delete _impl_.result_;
 }
 
-void GetFriendListRequestResponse::SetCachedSize(int size) const {
+void GetFriendListResponse::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void GetFriendListRequestResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:fixbug.GetFriendListRequestResponse)
+void GetFriendListResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:fixbug.GetFriendListResponse)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1439,7 +1440,7 @@ void GetFriendListRequestResponse::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* GetFriendListRequestResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* GetFriendListResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -1489,9 +1490,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* GetFriendListRequestResponse::_InternalSerialize(
+uint8_t* GetFriendListResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:fixbug.GetFriendListRequestResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:fixbug.GetFriendListResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1514,12 +1515,12 @@ uint8_t* GetFriendListRequestResponse::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:fixbug.GetFriendListRequestResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:fixbug.GetFriendListResponse)
   return target;
 }
 
-size_t GetFriendListRequestResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:fixbug.GetFriendListRequestResponse)
+size_t GetFriendListResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:fixbug.GetFriendListResponse)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -1543,17 +1544,17 @@ size_t GetFriendListRequestResponse::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetFriendListRequestResponse::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetFriendListResponse::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    GetFriendListRequestResponse::MergeImpl
+    GetFriendListResponse::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetFriendListRequestResponse::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetFriendListResponse::GetClassData() const { return &_class_data_; }
 
 
-void GetFriendListRequestResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<GetFriendListRequestResponse*>(&to_msg);
-  auto& from = static_cast<const GetFriendListRequestResponse&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:fixbug.GetFriendListRequestResponse)
+void GetFriendListResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetFriendListResponse*>(&to_msg);
+  auto& from = static_cast<const GetFriendListResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:fixbug.GetFriendListResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1566,25 +1567,25 @@ void GetFriendListRequestResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& t
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void GetFriendListRequestResponse::CopyFrom(const GetFriendListRequestResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:fixbug.GetFriendListRequestResponse)
+void GetFriendListResponse::CopyFrom(const GetFriendListResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:fixbug.GetFriendListResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool GetFriendListRequestResponse::IsInitialized() const {
+bool GetFriendListResponse::IsInitialized() const {
   return true;
 }
 
-void GetFriendListRequestResponse::InternalSwap(GetFriendListRequestResponse* other) {
+void GetFriendListResponse::InternalSwap(GetFriendListResponse* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   _impl_.friend_list_.InternalSwap(&other->_impl_.friend_list_);
   swap(_impl_.result_, other->_impl_.result_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GetFriendListRequestResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata GetFriendListResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_test_2eproto_getter, &descriptor_table_test_2eproto_once,
       file_level_metadata_test_2eproto[5]);
@@ -1603,9 +1604,17 @@ const ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor* UserServiceRpc::GetDescriptor(
   return descriptor();
 }
 
+void UserServiceRpc::Login(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
+                         const ::fixbug::LoginRequest*,
+                         ::fixbug::LoginResponse*,
+                         ::google::protobuf::Closure* done) {
+  controller->SetFailed("Method Login() not implemented.");
+  done->Run();
+}
+
 void UserServiceRpc::GetFriendList(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
                          const ::fixbug::GetFriendListRequest*,
-                         ::fixbug::GetFriendListRequestResponse*,
+                         ::fixbug::GetFriendListResponse*,
                          ::google::protobuf::Closure* done) {
   controller->SetFailed("Method GetFriendList() not implemented.");
   done->Run();
@@ -1619,10 +1628,18 @@ void UserServiceRpc::CallMethod(const ::PROTOBUF_NAMESPACE_ID::MethodDescriptor*
   GOOGLE_DCHECK_EQ(method->service(), file_level_service_descriptors_test_2eproto[0]);
   switch(method->index()) {
     case 0:
+      Login(controller,
+             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<const ::fixbug::LoginRequest*>(
+                 request),
+             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<::fixbug::LoginResponse*>(
+                 response),
+             done);
+      break;
+    case 1:
       GetFriendList(controller,
              ::PROTOBUF_NAMESPACE_ID::internal::DownCast<const ::fixbug::GetFriendListRequest*>(
                  request),
-             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<::fixbug::GetFriendListRequestResponse*>(
+             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<::fixbug::GetFriendListResponse*>(
                  response),
              done);
       break;
@@ -1637,6 +1654,8 @@ const ::PROTOBUF_NAMESPACE_ID::Message& UserServiceRpc::GetRequestPrototype(
   GOOGLE_DCHECK_EQ(method->service(), descriptor());
   switch(method->index()) {
     case 0:
+      return ::fixbug::LoginRequest::default_instance();
+    case 1:
       return ::fixbug::GetFriendListRequest::default_instance();
     default:
       GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
@@ -1650,7 +1669,9 @@ const ::PROTOBUF_NAMESPACE_ID::Message& UserServiceRpc::GetResponsePrototype(
   GOOGLE_DCHECK_EQ(method->service(), descriptor());
   switch(method->index()) {
     case 0:
-      return ::fixbug::GetFriendListRequestResponse::default_instance();
+      return ::fixbug::LoginResponse::default_instance();
+    case 1:
+      return ::fixbug::GetFriendListResponse::default_instance();
     default:
       GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
       return *::PROTOBUF_NAMESPACE_ID::MessageFactory::generated_factory()
@@ -1669,11 +1690,18 @@ UserServiceRpc_Stub::~UserServiceRpc_Stub() {
   if (owns_channel_) delete channel_;
 }
 
-void UserServiceRpc_Stub::GetFriendList(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                              const ::fixbug::GetFriendListRequest* request,
-                              ::fixbug::GetFriendListRequestResponse* response,
+void UserServiceRpc_Stub::Login(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
+                              const ::fixbug::LoginRequest* request,
+                              ::fixbug::LoginResponse* response,
                               ::google::protobuf::Closure* done) {
   channel_->CallMethod(descriptor()->method(0),
+                       controller, request, response, done);
+}
+void UserServiceRpc_Stub::GetFriendList(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
+                              const ::fixbug::GetFriendListRequest* request,
+                              ::fixbug::GetFriendListResponse* response,
+                              ::google::protobuf::Closure* done) {
+  channel_->CallMethod(descriptor()->method(1),
                        controller, request, response, done);
 }
 
@@ -1700,9 +1728,9 @@ template<> PROTOBUF_NOINLINE ::fixbug::User*
 Arena::CreateMaybeMessage< ::fixbug::User >(Arena* arena) {
   return Arena::CreateMessageInternal< ::fixbug::User >(arena);
 }
-template<> PROTOBUF_NOINLINE ::fixbug::GetFriendListRequestResponse*
-Arena::CreateMaybeMessage< ::fixbug::GetFriendListRequestResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::fixbug::GetFriendListRequestResponse >(arena);
+template<> PROTOBUF_NOINLINE ::fixbug::GetFriendListResponse*
+Arena::CreateMaybeMessage< ::fixbug::GetFriendListResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::fixbug::GetFriendListResponse >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

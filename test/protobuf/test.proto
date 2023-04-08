@@ -16,7 +16,7 @@ message ResultCode
 message LoginRequest
 {
     bytes name = 1; // 第一个字段
-    bytes pwd = 2;  // 第二个字段
+    bytes pwd = 2;  // 第二个字段 
 }
 
 // 定义登录响应消息类型
@@ -43,7 +43,7 @@ message User
     Sex sex = 3;
 }
 
-message GetFriendListRequestResponse
+message GetFriendListResponse
 {
     ResultCode result =  1;
     repeated User friend_list = 2; // 定义了一个列表类型（repeated：重复）
@@ -52,5 +52,6 @@ message GetFriendListRequestResponse
 // 定义RPC服务接口类和服务方法
 service UserServiceRpc
 {
-    rpc GetFriendList(GetFriendListRequest) returns (GetFriendListRequestResponse);
+    rpc Login(LoginRequest) returns (LoginResponse);
+    rpc GetFriendList(GetFriendListRequest) returns (GetFriendListResponse);
 }

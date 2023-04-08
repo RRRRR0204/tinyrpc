@@ -50,9 +50,9 @@ namespace fixbug {
 class GetFriendListRequest;
 struct GetFriendListRequestDefaultTypeInternal;
 extern GetFriendListRequestDefaultTypeInternal _GetFriendListRequest_default_instance_;
-class GetFriendListRequestResponse;
-struct GetFriendListRequestResponseDefaultTypeInternal;
-extern GetFriendListRequestResponseDefaultTypeInternal _GetFriendListRequestResponse_default_instance_;
+class GetFriendListResponse;
+struct GetFriendListResponseDefaultTypeInternal;
+extern GetFriendListResponseDefaultTypeInternal _GetFriendListResponse_default_instance_;
 class LoginRequest;
 struct LoginRequestDefaultTypeInternal;
 extern LoginRequestDefaultTypeInternal _LoginRequest_default_instance_;
@@ -68,7 +68,7 @@ extern UserDefaultTypeInternal _User_default_instance_;
 }  // namespace fixbug
 PROTOBUF_NAMESPACE_OPEN
 template<> ::fixbug::GetFriendListRequest* Arena::CreateMaybeMessage<::fixbug::GetFriendListRequest>(Arena*);
-template<> ::fixbug::GetFriendListRequestResponse* Arena::CreateMaybeMessage<::fixbug::GetFriendListRequestResponse>(Arena*);
+template<> ::fixbug::GetFriendListResponse* Arena::CreateMaybeMessage<::fixbug::GetFriendListResponse>(Arena*);
 template<> ::fixbug::LoginRequest* Arena::CreateMaybeMessage<::fixbug::LoginRequest>(Arena*);
 template<> ::fixbug::LoginResponse* Arena::CreateMaybeMessage<::fixbug::LoginResponse>(Arena*);
 template<> ::fixbug::ResultCode* Arena::CreateMaybeMessage<::fixbug::ResultCode>(Arena*);
@@ -957,24 +957,24 @@ class User final :
 };
 // -------------------------------------------------------------------
 
-class GetFriendListRequestResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:fixbug.GetFriendListRequestResponse) */ {
+class GetFriendListResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:fixbug.GetFriendListResponse) */ {
  public:
-  inline GetFriendListRequestResponse() : GetFriendListRequestResponse(nullptr) {}
-  ~GetFriendListRequestResponse() override;
-  explicit PROTOBUF_CONSTEXPR GetFriendListRequestResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline GetFriendListResponse() : GetFriendListResponse(nullptr) {}
+  ~GetFriendListResponse() override;
+  explicit PROTOBUF_CONSTEXPR GetFriendListResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  GetFriendListRequestResponse(const GetFriendListRequestResponse& from);
-  GetFriendListRequestResponse(GetFriendListRequestResponse&& from) noexcept
-    : GetFriendListRequestResponse() {
+  GetFriendListResponse(const GetFriendListResponse& from);
+  GetFriendListResponse(GetFriendListResponse&& from) noexcept
+    : GetFriendListResponse() {
     *this = ::std::move(from);
   }
 
-  inline GetFriendListRequestResponse& operator=(const GetFriendListRequestResponse& from) {
+  inline GetFriendListResponse& operator=(const GetFriendListResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline GetFriendListRequestResponse& operator=(GetFriendListRequestResponse&& from) noexcept {
+  inline GetFriendListResponse& operator=(GetFriendListResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -997,20 +997,20 @@ class GetFriendListRequestResponse final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const GetFriendListRequestResponse& default_instance() {
+  static const GetFriendListResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const GetFriendListRequestResponse* internal_default_instance() {
-    return reinterpret_cast<const GetFriendListRequestResponse*>(
-               &_GetFriendListRequestResponse_default_instance_);
+  static inline const GetFriendListResponse* internal_default_instance() {
+    return reinterpret_cast<const GetFriendListResponse*>(
+               &_GetFriendListResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     5;
 
-  friend void swap(GetFriendListRequestResponse& a, GetFriendListRequestResponse& b) {
+  friend void swap(GetFriendListResponse& a, GetFriendListResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(GetFriendListRequestResponse* other) {
+  inline void Swap(GetFriendListResponse* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1023,7 +1023,7 @@ class GetFriendListRequestResponse final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(GetFriendListRequestResponse* other) {
+  void UnsafeArenaSwap(GetFriendListResponse* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1031,14 +1031,14 @@ class GetFriendListRequestResponse final :
 
   // implements Message ----------------------------------------------
 
-  GetFriendListRequestResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<GetFriendListRequestResponse>(arena);
+  GetFriendListResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<GetFriendListResponse>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const GetFriendListRequestResponse& from);
+  void CopyFrom(const GetFriendListResponse& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const GetFriendListRequestResponse& from) {
-    GetFriendListRequestResponse::MergeImpl(*this, from);
+  void MergeFrom( const GetFriendListResponse& from) {
+    GetFriendListResponse::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -1056,15 +1056,15 @@ class GetFriendListRequestResponse final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(GetFriendListRequestResponse* other);
+  void InternalSwap(GetFriendListResponse* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "fixbug.GetFriendListRequestResponse";
+    return "fixbug.GetFriendListResponse";
   }
   protected:
-  explicit GetFriendListRequestResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit GetFriendListResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1117,7 +1117,7 @@ class GetFriendListRequestResponse final :
       ::fixbug::ResultCode* result);
   ::fixbug::ResultCode* unsafe_arena_release_result();
 
-  // @@protoc_insertion_point(class_scope:fixbug.GetFriendListRequestResponse)
+  // @@protoc_insertion_point(class_scope:fixbug.GetFriendListResponse)
  private:
   class _Internal;
 
@@ -1147,9 +1147,13 @@ class UserServiceRpc : public ::PROTOBUF_NAMESPACE_ID::Service {
 
   static const ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor* descriptor();
 
+  virtual void Login(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
+                       const ::fixbug::LoginRequest* request,
+                       ::fixbug::LoginResponse* response,
+                       ::google::protobuf::Closure* done);
   virtual void GetFriendList(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
                        const ::fixbug::GetFriendListRequest* request,
-                       ::fixbug::GetFriendListRequestResponse* response,
+                       ::fixbug::GetFriendListResponse* response,
                        ::google::protobuf::Closure* done);
 
   // implements Service ----------------------------------------------
@@ -1180,9 +1184,13 @@ class UserServiceRpc_Stub : public UserServiceRpc {
 
   // implements UserServiceRpc ------------------------------------------
 
+  void Login(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
+                       const ::fixbug::LoginRequest* request,
+                       ::fixbug::LoginResponse* response,
+                       ::google::protobuf::Closure* done);
   void GetFriendList(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
                        const ::fixbug::GetFriendListRequest* request,
-                       ::fixbug::GetFriendListRequestResponse* response,
+                       ::fixbug::GetFriendListResponse* response,
                        ::google::protobuf::Closure* done);
  private:
   ::PROTOBUF_NAMESPACE_ID::RpcChannel* channel_;
@@ -1610,31 +1618,31 @@ inline void User::set_sex(::fixbug::User_Sex value) {
 
 // -------------------------------------------------------------------
 
-// GetFriendListRequestResponse
+// GetFriendListResponse
 
 // .fixbug.ResultCode result = 1;
-inline bool GetFriendListRequestResponse::_internal_has_result() const {
+inline bool GetFriendListResponse::_internal_has_result() const {
   return this != internal_default_instance() && _impl_.result_ != nullptr;
 }
-inline bool GetFriendListRequestResponse::has_result() const {
+inline bool GetFriendListResponse::has_result() const {
   return _internal_has_result();
 }
-inline void GetFriendListRequestResponse::clear_result() {
+inline void GetFriendListResponse::clear_result() {
   if (GetArenaForAllocation() == nullptr && _impl_.result_ != nullptr) {
     delete _impl_.result_;
   }
   _impl_.result_ = nullptr;
 }
-inline const ::fixbug::ResultCode& GetFriendListRequestResponse::_internal_result() const {
+inline const ::fixbug::ResultCode& GetFriendListResponse::_internal_result() const {
   const ::fixbug::ResultCode* p = _impl_.result_;
   return p != nullptr ? *p : reinterpret_cast<const ::fixbug::ResultCode&>(
       ::fixbug::_ResultCode_default_instance_);
 }
-inline const ::fixbug::ResultCode& GetFriendListRequestResponse::result() const {
-  // @@protoc_insertion_point(field_get:fixbug.GetFriendListRequestResponse.result)
+inline const ::fixbug::ResultCode& GetFriendListResponse::result() const {
+  // @@protoc_insertion_point(field_get:fixbug.GetFriendListResponse.result)
   return _internal_result();
 }
-inline void GetFriendListRequestResponse::unsafe_arena_set_allocated_result(
+inline void GetFriendListResponse::unsafe_arena_set_allocated_result(
     ::fixbug::ResultCode* result) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
@@ -1645,9 +1653,9 @@ inline void GetFriendListRequestResponse::unsafe_arena_set_allocated_result(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:fixbug.GetFriendListRequestResponse.result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:fixbug.GetFriendListResponse.result)
 }
-inline ::fixbug::ResultCode* GetFriendListRequestResponse::release_result() {
+inline ::fixbug::ResultCode* GetFriendListResponse::release_result() {
   
   ::fixbug::ResultCode* temp = _impl_.result_;
   _impl_.result_ = nullptr;
@@ -1662,14 +1670,14 @@ inline ::fixbug::ResultCode* GetFriendListRequestResponse::release_result() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::fixbug::ResultCode* GetFriendListRequestResponse::unsafe_arena_release_result() {
-  // @@protoc_insertion_point(field_release:fixbug.GetFriendListRequestResponse.result)
+inline ::fixbug::ResultCode* GetFriendListResponse::unsafe_arena_release_result() {
+  // @@protoc_insertion_point(field_release:fixbug.GetFriendListResponse.result)
   
   ::fixbug::ResultCode* temp = _impl_.result_;
   _impl_.result_ = nullptr;
   return temp;
 }
-inline ::fixbug::ResultCode* GetFriendListRequestResponse::_internal_mutable_result() {
+inline ::fixbug::ResultCode* GetFriendListResponse::_internal_mutable_result() {
   
   if (_impl_.result_ == nullptr) {
     auto* p = CreateMaybeMessage<::fixbug::ResultCode>(GetArenaForAllocation());
@@ -1677,12 +1685,12 @@ inline ::fixbug::ResultCode* GetFriendListRequestResponse::_internal_mutable_res
   }
   return _impl_.result_;
 }
-inline ::fixbug::ResultCode* GetFriendListRequestResponse::mutable_result() {
+inline ::fixbug::ResultCode* GetFriendListResponse::mutable_result() {
   ::fixbug::ResultCode* _msg = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:fixbug.GetFriendListRequestResponse.result)
+  // @@protoc_insertion_point(field_mutable:fixbug.GetFriendListResponse.result)
   return _msg;
 }
-inline void GetFriendListRequestResponse::set_allocated_result(::fixbug::ResultCode* result) {
+inline void GetFriendListResponse::set_allocated_result(::fixbug::ResultCode* result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.result_;
@@ -1699,46 +1707,46 @@ inline void GetFriendListRequestResponse::set_allocated_result(::fixbug::ResultC
     
   }
   _impl_.result_ = result;
-  // @@protoc_insertion_point(field_set_allocated:fixbug.GetFriendListRequestResponse.result)
+  // @@protoc_insertion_point(field_set_allocated:fixbug.GetFriendListResponse.result)
 }
 
 // repeated .fixbug.User friend_list = 2;
-inline int GetFriendListRequestResponse::_internal_friend_list_size() const {
+inline int GetFriendListResponse::_internal_friend_list_size() const {
   return _impl_.friend_list_.size();
 }
-inline int GetFriendListRequestResponse::friend_list_size() const {
+inline int GetFriendListResponse::friend_list_size() const {
   return _internal_friend_list_size();
 }
-inline void GetFriendListRequestResponse::clear_friend_list() {
+inline void GetFriendListResponse::clear_friend_list() {
   _impl_.friend_list_.Clear();
 }
-inline ::fixbug::User* GetFriendListRequestResponse::mutable_friend_list(int index) {
-  // @@protoc_insertion_point(field_mutable:fixbug.GetFriendListRequestResponse.friend_list)
+inline ::fixbug::User* GetFriendListResponse::mutable_friend_list(int index) {
+  // @@protoc_insertion_point(field_mutable:fixbug.GetFriendListResponse.friend_list)
   return _impl_.friend_list_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::fixbug::User >*
-GetFriendListRequestResponse::mutable_friend_list() {
-  // @@protoc_insertion_point(field_mutable_list:fixbug.GetFriendListRequestResponse.friend_list)
+GetFriendListResponse::mutable_friend_list() {
+  // @@protoc_insertion_point(field_mutable_list:fixbug.GetFriendListResponse.friend_list)
   return &_impl_.friend_list_;
 }
-inline const ::fixbug::User& GetFriendListRequestResponse::_internal_friend_list(int index) const {
+inline const ::fixbug::User& GetFriendListResponse::_internal_friend_list(int index) const {
   return _impl_.friend_list_.Get(index);
 }
-inline const ::fixbug::User& GetFriendListRequestResponse::friend_list(int index) const {
-  // @@protoc_insertion_point(field_get:fixbug.GetFriendListRequestResponse.friend_list)
+inline const ::fixbug::User& GetFriendListResponse::friend_list(int index) const {
+  // @@protoc_insertion_point(field_get:fixbug.GetFriendListResponse.friend_list)
   return _internal_friend_list(index);
 }
-inline ::fixbug::User* GetFriendListRequestResponse::_internal_add_friend_list() {
+inline ::fixbug::User* GetFriendListResponse::_internal_add_friend_list() {
   return _impl_.friend_list_.Add();
 }
-inline ::fixbug::User* GetFriendListRequestResponse::add_friend_list() {
+inline ::fixbug::User* GetFriendListResponse::add_friend_list() {
   ::fixbug::User* _add = _internal_add_friend_list();
-  // @@protoc_insertion_point(field_add:fixbug.GetFriendListRequestResponse.friend_list)
+  // @@protoc_insertion_point(field_add:fixbug.GetFriendListResponse.friend_list)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::fixbug::User >&
-GetFriendListRequestResponse::friend_list() const {
-  // @@protoc_insertion_point(field_list:fixbug.GetFriendListRequestResponse.friend_list)
+GetFriendListResponse::friend_list() const {
+  // @@protoc_insertion_point(field_list:fixbug.GetFriendListResponse.friend_list)
   return _impl_.friend_list_;
 }
 
