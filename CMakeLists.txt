@@ -2,6 +2,9 @@
 cmake_minimum_required(VERSION 3.0)
 project(tinyrpc)
 
+# 生成debug版本，可以进行gdb调试
+set(CMAKE_BUILD_TYPE "Debug")
+
 # 设置项目可执行文件输出目录
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 # 设置项目库文件输出目录
