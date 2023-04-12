@@ -14,7 +14,7 @@
 #include <google/protobuf/service.h>
 #include <google/protobuf/descriptor.h>
 
-// 框架提供的专门负责发布rpc服务的网络对象类
+// 框架提供的专门负责发布rpc服务的网络对象类，RpcServer
 class RpcProvider
 {
 public:
