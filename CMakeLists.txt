@@ -15,6 +15,7 @@ include_directories(${PROJECT_SOURCE_DIR}/src/include)
 include_directories(${PROJECT_SOURCE_DIR}/example)
 # 项目库文件搜索路径
 link_directories(${PROJECT_SOURCE_DIR}/lib)
+link_directories(/usr/local/lib)
 
 add_subdirectory(src)
 add_subdirectory(example)
